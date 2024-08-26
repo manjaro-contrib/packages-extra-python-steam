@@ -3,8 +3,8 @@
 pkgname=python-steam
 _name=${pkgname#python-}
 pkgver=1.6.1
-pkgrel=1
-pkgdesc="Python package for interacting with Steam (Solstice Game Studios fork)"
+pkgrel=2
+pkgdesc="Python package for interacting with Steam"
 arch=('any')
 url="https://github.com/solsticegamestudios/steam"
 license=('MIT')
