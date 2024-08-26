@@ -2,11 +2,11 @@
 
 pkgname=python-steam
 _name=${pkgname#python-}
-pkgver=1.4.4
-pkgrel=4
-pkgdesc="Python package for interacting with Steam"
+pkgver=1.6.1
+pkgrel=1
+pkgdesc="Python package for interacting with Steam (Solstice Game Studios fork)"
 arch=('any')
-url="https://github.com/ValvePython/steam"
+url="https://github.com/solsticegamestudios/steam"
 license=('MIT')
 depends=(
   'python'
@@ -22,8 +22,9 @@ makedepends=(
   'python-setuptools'
   'python-wheel'
 )
+replaces=('python-steam-solstice')
 source=("$_name-$pkgver.tar.gz::$url/archive/refs/tags/v$pkgver.tar.gz")
-sha256sums=('2b5bd6911c0d4a7312f441b8d162b9d8d47c8bebb8efc6c8867393b0323fa52e')
+sha256sums=('dcc305f11e1686a3557cd87afdc50ce177a5015ba3fdd51bef63c7302dd21b05')
 
 build() {
   cd "$_name-$pkgver"
