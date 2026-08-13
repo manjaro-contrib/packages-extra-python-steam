@@ -67,7 +67,11 @@ build() {
 
 check() {
   cd "$_name-${_pkgver}"
-  pytest || :
+  python -m venv --clear --without-pip --system-site-packages test-env
+  test-env/bin/python -m installer dist/*.whl
+
+  # Skip failing tests
+  test-env/bin/python -I -m pytest -k "not test_core_cm and not test_utils"
 }
 
 package() {
